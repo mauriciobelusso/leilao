@@ -1,5 +1,7 @@
 package mauriciobelusso.com.github.leilao.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -20,19 +22,21 @@ public class Lote implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @EqualsAndHashCode.Include
     private Integer id;
+    @Column(name = "numerolote")
     private Integer numeroLote;
     @Column(length = 60, nullable = false)
     private String descricao;
     @Column(nullable = false)
     private BigDecimal quantidade;
+    @Column(name = "valorinicial")
     private BigDecimal valorInicial;
     @Column(length = 128, nullable = false)
     private String unidade;
     @ManyToOne
-    @JoinColumn(name = "leilao")
+    @JsonBackReference
     private Leilao leilao;
-    @Column(nullable = false)
+    @Column(name = "createdat", nullable = false)
     private LocalDateTime createdAt;
-    @Column(nullable = false)
+    @Column(name = "updatedat", nullable = false)
     private LocalDateTime updatedAt;
 }

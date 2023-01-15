@@ -1,11 +1,12 @@
 package mauriciobelusso.com.github.leilao.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -24,13 +25,13 @@ public class Leilao implements Serializable {
     private String descricao;
     @Column(nullable = false)
     private Integer vendedor;
-    @Column(nullable = false)
+    @Column(name = "inicioprevisto", nullable = false)
     private LocalDateTime inicioPrevisto;
-    @Column(nullable = false)
+    @Column(name = "createdat", nullable = false)
     private LocalDateTime createdAt;
-    @Column(nullable = false)
+    @Column(name = "updatedat", nullable = false)
     private LocalDateTime updatedAt;
-    @OneToMany
-    @JoinColumn(name = "leilao")
-    private List<Lote> lotes;
+    @OneToMany(mappedBy = "leilao")
+    @JsonManagedReference
+    private Set<Lote> lotes;
 }

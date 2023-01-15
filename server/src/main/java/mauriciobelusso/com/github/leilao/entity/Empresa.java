@@ -20,7 +20,7 @@ public class Empresa implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @EqualsAndHashCode.Include
     private Integer id;
-    @Column(length = 64, nullable = false)
+    @Column(name = "razaosocial", length = 64, nullable = false)
     private String razaoSocial;
     @Column(length = 32, nullable = false, unique = true)
     private String cnpj;
@@ -46,8 +46,8 @@ public class Empresa implements Serializable {
     private String usuario;
     @Column(length = 128)
     private String senha;
-    @Column(nullable = false)
+    @Column(name = "createdat", nullable = false)
     private LocalDateTime createdAt;
-    @Column(nullable = false)
+    @Column(name = "updatedat", nullable = false)
     private LocalDateTime updatedAt;
 }

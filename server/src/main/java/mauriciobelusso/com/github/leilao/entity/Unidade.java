@@ -21,8 +21,8 @@ public class Unidade implements Serializable {
     private Integer id;
     @Column(length = 128, nullable = false)
     private String nome;
-    @Column(nullable = false)
+    @Column(name = "createdat", nullable = false)
     private LocalDateTime createdAt;
-    @Column(nullable = false)
+    @Column(name = "updatedat", nullable = false)
     private LocalDateTime updatedAt;
 }
