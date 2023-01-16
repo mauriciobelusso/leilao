@@ -1,7 +1,7 @@
 package mauriciobelusso.com.github.leilao.service.impl;
 
-import mauriciobelusso.com.github.leilao.entity.Comprador;
-import mauriciobelusso.com.github.leilao.entity.CompradorId;
+import mauriciobelusso.com.github.leilao.model.Comprador;
+import mauriciobelusso.com.github.leilao.model.CompradorId;
 import mauriciobelusso.com.github.leilao.repository.CompradorRepository;
 import mauriciobelusso.com.github.leilao.service.CompradorService;
 import org.springframework.data.jpa.repository.JpaRepository;

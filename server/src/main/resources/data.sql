@@ -117,3 +117,8 @@ VALUES
   (9, 2),
   (10, 1),
   (10, 2);
+
+SELECT setval('empresa_id_seq', 21);
+SELECT setval('leilao_id_seq', 21);
+SELECT setval('lote_id_seq', 21);
+SELECT setval('unidade_id_seq', 21);

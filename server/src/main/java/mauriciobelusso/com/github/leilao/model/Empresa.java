@@ -1,11 +1,10 @@
-package mauriciobelusso.com.github.leilao.entity;
+package mauriciobelusso.com.github.leilao.model;
 
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Getter
 @Setter

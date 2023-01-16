@@ -1,4 +1,4 @@
-package mauriciobelusso.com.github.leilao.entity;
+package mauriciobelusso.com.github.leilao.model;
 
 import lombok.*;
 
