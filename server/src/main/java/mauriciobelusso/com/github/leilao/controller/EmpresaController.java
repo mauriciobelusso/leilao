@@ -1,6 +1,6 @@
 package mauriciobelusso.com.github.leilao.controller;
 
-import mauriciobelusso.com.github.leilao.entity.Empresa;
+import mauriciobelusso.com.github.leilao.model.Empresa;
 import mauriciobelusso.com.github.leilao.service.CrudService;
 import mauriciobelusso.com.github.leilao.service.EmpresaService;
 import org.springframework.web.bind.annotation.RequestMapping;

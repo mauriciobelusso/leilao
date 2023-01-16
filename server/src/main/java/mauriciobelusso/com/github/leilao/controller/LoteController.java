@@ -1,6 +1,6 @@
 package mauriciobelusso.com.github.leilao.controller;
 
-import mauriciobelusso.com.github.leilao.entity.Lote;
+import mauriciobelusso.com.github.leilao.model.Lote;
 import mauriciobelusso.com.github.leilao.service.CrudService;
 import mauriciobelusso.com.github.leilao.service.LoteService;
 import org.springframework.web.bind.annotation.RequestMapping;
